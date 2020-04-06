@@ -1,0 +1,54 @@
+{
+  "name": "fractal-theme-wave",
+  "version": "1.0.0",
+  "description": "Fractal theme, based on Mandelbrot.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "watchify assets/js/mandelbrot.js -o assets/bundle.js",
+    "build": "browserify assets/js/mandelbrot.js -o assets/bundle.js"
+  },
+  "keywords": [
+    "fractal",
+    "theme",
+    "subtheme",
+    "style guide",
+    "component library",
+    "pattern library",
+    "design system"
+  ],
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
+  },
+  "browserslist": [
+    "> 0.5%",
+    "Firefox ESR",
+    "IE 11",
+    "last 2 versions",
+    "not dead"
+  ],
+  "author": "Veit Lehmann",
+  "license": "MIT",
+  "dependencies": {
+    "@frctl/mandelbrot": "^1.2.1",
+    "jquery": "^3.4.1",
+    "jquery-pjax": "^2.0.1",
+    "jquery-resizable-dom": "^0.16.0",
+    "select2": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.1",
+    "watchify": "^3.11.1"
+  }
+}

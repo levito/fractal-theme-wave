@@ -1,0 +1,35 @@
+{% if not variant.isHidden %}
+<div class="Pen-variant">
+    {% if entity.collated and entity.isComponent %}
+        {% if entity.variants().size == 1 %}
+            {% set previewUrl = path(frctl.theme.urlFromRoute('preview', {handle: entity.handle})) %}
+        {% else %}
+            {% set previewUrl = path(frctl.theme.urlFromRoute('preview', {handle: variant.handle})) %}
+        {% endif %}
+        {% set entity = variant %}
+    {% endif %}
+    
+    {% set isDefault = (variant.name == 'default') %}
+    {% if not isDefault %}
+        <div class="Pen-panel Pen-header">
+            <h2 class="Pen-title">
+                <a class="Pen-previewLink" href="{{ previewUrl }}" title="Component preview">
+                    {{ variant.label }}
+                    {% include "icons/open-in-browser.svg" %}
+                </a>
+            </h2>
+            {{ status.tag(variant.status) }}
+        </div>
+    {% endif %}
+
+    {% if not isDefault and variant.notes %}
+        <div class="Pen-description Prose">
+            {{ frctl.docs.renderString(variant.notes, renderEnv) | async }}
+        </div>
+    {% endif %}
+
+    <div class="Pen-variantTabs">
+        {% include "partials/pen/browser.nunj" %}
+    </div>
+</div>
+{% endif %}
