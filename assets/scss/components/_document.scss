@@ -1,8 +1,8 @@
 .Document {
-  padding: 1.5rem 2rem;
+  padding: 3rem;
 
   @include mq($until: navCollapse) {
-    padding: 1.25rem 1rem;
+    padding: 3rem 1rem;
   }
 }
 

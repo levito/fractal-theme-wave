@@ -2,9 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 0 1.25rem 1.5rem;
+  padding: 2.5rem 3rem 0;
   overflow: hidden;
   background: white;
+
+  @include mq($until: navCollapse) {
+    padding: 2.5rem 1rem 0;
+  }
 
   &.is-resizing {
     cursor: grabbing;
@@ -19,7 +23,6 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  padding: 0.75rem 0.75rem 0;
 
   .Status {
     @include margin-inline(start, auto);
@@ -27,10 +30,6 @@
   }
 
   @include mq($until: navCollapse) {
-    margin: 0;
-    padding: 0.75rem;
-    border-bottom: 1px solid $color-frame-border;
-
     .Status .Status-label {
       position: relative;
       width: 0;
@@ -48,7 +47,7 @@
 
 .Pen-title {
   @include font(subHeading);
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -74,19 +73,11 @@
 }
 
 .Pen-description {
-  padding: 0 0.75rem 0.75rem;
+  padding: 0 0 1rem;
 }
 
 .Pen-preview {
   flex: 1;
-  height: 50%;
-  max-height: calc(100% - 3.75rem);
-
-  @include mq($until: navCollapse) {
-    flex: 1 1 auto;
-    height: auto !important;
-    max-height: 100%;
-  }
 }
 
 .Pen-handle {
@@ -118,12 +109,7 @@
 .Pen-info {
   position: relative;
   flex: 1 1 auto;
-  margin: $handle-size;
-  margin-top: 0;
+  margin-bottom: 3rem;
   overflow: hidden;
   border: 1px solid $color-frame-border;
-
-  @include mq($until: navCollapse) {
-    display: none;
-  }
 }
