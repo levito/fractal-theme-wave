@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  height: 100%;
+  padding: 0 1.25rem 1.5rem;
   overflow: hidden;
   background: white;
 
@@ -19,8 +19,7 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  max-height: 3rem;
-  padding: 0.75rem;
+  padding: 0.75rem 0.75rem 0;
 
   .Status {
     @include margin-inline(start, auto);
@@ -49,17 +48,24 @@
 
 .Pen-title {
   @include font(subHeading);
+  padding: 0.75rem 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.Pen-title--main {
+  @include font(title);
 }
 
 .Pen-previewLink {
   @include link-default($color-heading, none);
 
   svg {
-    opacity: 0.75;
+    transition: opacity 0.2s;
+    opacity: 0.25;
     fill: $color-link;
+    vertical-align: middle;
   }
 
   &:hover svg {
@@ -67,25 +73,32 @@
   }
 }
 
+.Pen-description {
+  padding: 0 0.75rem 0.75rem;
+}
+
 .Pen-preview {
-  flex: 0 0 auto;
+  flex: 1;
   height: 50%;
   max-height: calc(100% - 3.75rem);
-  margin: 0 $handle-size;
 
   @include mq($until: navCollapse) {
     flex: 1 1 auto;
     height: auto !important;
     max-height: 100%;
-    margin: 0;
   }
 }
 
 .Pen-handle {
   @include dragHandle;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
   flex: 0 0 auto;
   height: $handle-size;
-  margin: 0 $handle-size;
+  margin: 0 $handle-size 0 0;
+  border-top: 1px solid $color-frame-border;
   background: transparent url('../../img/icon-drag--horizontal.svg') no-repeat
     50% 50%;
   background-size: 16px 3px;
