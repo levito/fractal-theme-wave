@@ -4,8 +4,8 @@
   "description": "Fractal theme, based on Mandelbrot.",
   "main": "index.js",
   "scripts": {
-    "dev": "watchify assets/js/mandelbrot.js -o assets/bundle.js",
-    "build": "browserify assets/js/mandelbrot.js -o assets/bundle.js"
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "keywords": [
     "fractal",
@@ -16,18 +16,6 @@
     "pattern library",
     "design system"
   ],
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "@babel/preset-env"
-          ]
-        }
-      ]
-    ]
-  },
   "browserslist": [
     "> 0.5%",
     "Firefox ESR",
@@ -39,16 +27,27 @@
   "license": "MIT",
   "dependencies": {
     "@frctl/mandelbrot": "^1.2.1",
+    "iframe-resizer": "^4.2.10",
     "jquery": "^3.4.1",
     "jquery-pjax": "^2.0.1",
     "jquery-resizable-dom": "^0.16.0",
+    "normalize.css": "^8.0.1",
+    "sass-mq": "^5.0.1",
     "select2": "^4.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
-    "babelify": "^10.0.0",
-    "browserify": "^16.5.1",
-    "watchify": "^3.11.1"
+    "autoprefixer": "^9.7.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.0",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass-magic-importer": "^5.3.2",
+    "postcss-loader": "^3.0.0",
+    "resolve-url-loader": "^3.1.1",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1"
   }
 }

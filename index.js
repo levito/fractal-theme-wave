@@ -1,14 +1,14 @@
 const mandelbrot = require('@frctl/mandelbrot')
 
-module.exports = function(options) {
+module.exports = function (options) {
   const theme = mandelbrot({
     skin: 'navy',
-    scripts: ['/theme-waveui/bundle.js'],
-    styles: ['default', '/theme-waveui/overrides.css'],
+    scripts: ['/theme-wave/js/wave.js'],
+    styles: ['/theme-wave/css/wave.css'],
     ...options,
   })
   theme.addLoadPath(__dirname + '/views')
-  theme.addStatic(__dirname + '/assets', '/theme-waveui')
+  theme.addStatic(__dirname + '/dist', '/theme-wave')
 
   return theme
 }
