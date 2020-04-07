@@ -21,6 +21,6 @@ $mq-breakpoints: (
 // -----------------------------------------------------------------------------
 // Core
 // -----------------------------------------------------------------------------
-@import '~@frctl/mandelbrot/assets/scss/core/_mixins';
-@import './_fonts';
-@import '~@frctl/mandelbrot/assets/scss/core/_foundation';
+@import 'mixins';
+@import 'fonts';
+@import 'foundation';
