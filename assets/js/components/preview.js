@@ -21,23 +21,16 @@ class Preview {
 
   _init() {
     const dir = $('html').attr('dir')
-    let handleClicks = 0
 
     this._resizer.css('width', '100%')
     this._resizer.css('height', '100%')
 
-    this._handleVertical.on('mousedown', e => {
-      handleClicks++
-
-      setTimeout(function() {
-        handleClicks = 0
-      }, 400)
-
-      if (handleClicks === 2) {
-        this._resizer.css('width', '100%')
-        return false
-      }
-    })
+    this._handleVertical.on('dblclick', () =>
+      this._resizer.css('width', '100%'),
+    )
+    this._handleHorizontal.on('dblclick', () =>
+      this._resizer.css('height', '100%'),
+    )
 
     this._resizer.resizable({
       handleSelector: this._handleVertical,
@@ -48,7 +41,7 @@ class Preview {
         events.trigger('start-dragging')
       },
       onDragEnd: () => {
-        if (this._resizer.outerWidth() == this._el.outerWidth()) {
+        if (this._resizer.outerWidth() >= this._el.outerWidth()) {
           this._resizer.css('width', '100%')
         }
         this._el.removeClass('is-resizing')
@@ -74,7 +67,7 @@ class Preview {
       resizeHeightFrom: 'bottom',
     })
 
-    iframeResizer()
+    iframeResizer({ scrolling: true })
   }
 
   disableEvents() {
