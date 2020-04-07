@@ -1,81 +1,81 @@
 .FileBrowser {
-    position: static;
-    flex-basis: 100%;
+  position: static;
+  flex-basis: 100%;
 }
 
 .FileBrowser-selectWrapper {
-    margin: -0.75rem -0.75rem 0.75rem -0.75rem;
-    padding: 0.5rem 0.75rem;
-    background-color: rgba($color-frame-border, 0.05);
+  margin: -0.75rem -0.75rem 0.75rem -0.75rem;
+  padding: 0.5rem 0.75rem;
+  background-color: rgba($color-frame-border, 0.05);
 
-    .select2-container {
-        @include font(caption);
-        @include margin-inline(start, -0.25rem);
-        margin-bottom: -1px;
-        min-width: 15em;
-    }
+  .select2-container {
+    @include font(caption);
+    @include margin-inline(start, -0.25rem);
+    min-width: 15em;
+    margin-bottom: -1px;
+  }
 
-    select:focus,
-    select:active {
-        outline: none;
-    }
+  select:focus,
+  select:active {
+    outline: none;
+  }
 }
 
 .FileBrowser-select-label {
-    @include font(label);
-    display: block;
-    width: auto;
-    padding: 0.25rem 0;
-    font-weight: bold;
+  @include font(label);
+  display: block;
+  width: auto;
+  padding: 0.25rem 0;
+  font-weight: bold;
 }
 
 .select2-selection.select2-selection--single {
-    border-color: $color-frame-border;
+  border-color: $color-frame-border;
 
-    .select2-container--focus & {
-        outline: none;
-        border-color: $color-link;
-    }
+  .select2-container--focus & {
+    border-color: $color-link;
+    outline: none;
+  }
 }
 
 .select2-results__option {
-    @include font(caption);
-    min-width: 15em;
+  @include font(caption);
+  min-width: 15em;
 
-    &[aria-selected=true] {
-        background-color: rgba($color-frame-border, 0.1) !important;
-    }
+  &[aria-selected='true'] {
+    background-color: rgba($color-frame-border, 0.1) !important;
+  }
 }
 
 .select2-results__option--highlighted[aria-selected] {
-    background-color: $color-header-background !important;
-    color: $color-header-content !important;
+  background-color: $color-header-background !important;
+  color: $color-header-content !important;
 }
 
 .FileBrowser-item {
-    display: none;
+  display: none;
 
-    &.is-active {
-        display: block;
-    }
+  &.is-active {
+    display: block;
+  }
 }
 
 @include mq($from: medium) {
-    .Frame.is-closed {
-        .FileBrowser-select-label {
-            position: relative;
-            width: 10rem;
-            display: inline-block;
-        }
+  .Frame.is-closed {
+    .FileBrowser-select-label {
+      display: inline-block;
+      position: relative;
+      width: 10rem;
     }
+  }
 }
 
 @include mq($from: large) {
-    .Frame:not(.is-closed) {
-        .FileBrowser-select-label {
-            position: relative;
-            width: 10rem;
-            display: inline-block;
-        }
+  .Frame:not(.is-closed) {
+    .FileBrowser-select-label {
+      display: inline-block;
+      position: relative;
+      width: 10rem;
     }
+  }
 }

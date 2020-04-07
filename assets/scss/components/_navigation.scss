@@ -1,12 +1,12 @@
 .Navigation {
-    display: inline-block;
-    min-width: 100%;
+  display: inline-block;
+  min-width: 100%;
 }
 
 .Navigation-group {
-    @include clearfix;
+  @include clearfix;
 
-    & + & {
-        margin-top: 1.5rem;
-    }
+  & + & {
+    margin-top: 1.5rem;
+  }
 }
