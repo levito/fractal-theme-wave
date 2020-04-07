@@ -16,16 +16,13 @@
   }
 
   @include mq(navCollapse) {
-    border: 1px solid $color-frame-border;
     background-color: $color-background-offset;
   }
 }
 
 .Preview-wrapper {
   @include offset-inline(start, 0);
-  position: absolute;
-  top: 0;
-  bottom: 0;
+  position: relative;
   width: 100%;
   width: calc(100% + #{$handle-size});
   min-width: 200px;
@@ -36,13 +33,14 @@
 
 .Preview-resizer {
   @include offset-inline(start, 0);
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
   width: 100%;
   min-width: 180px;
   max-width: calc(100% - #{$handle-size} + 1px);
   height: 100%;
+  min-height: 10vh;
   overflow: auto;
   background-color: white;
   -webkit-overflow-scrolling: touch;
@@ -60,10 +58,13 @@
 
 .Preview-iframe {
   @include trbl(0);
-  position: absolute;
+  display: block;
+  position: relative;
   z-index: 0;
   width: 100%;
   height: 100%;
+  min-height: 100%;
+  max-height: 100%;
 }
 
 .Preview-overlay {
