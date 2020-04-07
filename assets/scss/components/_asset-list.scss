@@ -1,47 +1,47 @@
 .AssetList {
-    list-style: none;
-    max-width: 900px;
-    margin-top: 40px;
+  max-width: 900px;
+  margin-top: 40px;
+  list-style: none;
 }
 
 .AssetList-asset {
-    list-style: none;
-    width: 100%;
+  width: 100%;
+  list-style: none;
 }
 
 .AssetList-name {
-    color: rgba($color-text, 0.5);
+  color: rgba($color-text, 0.5);
 
-    strong {
-        color: $color-link;
-        font-weight: normal;
-    }
+  strong {
+    color: $color-link;
+    font-weight: normal;
+  }
 }
 
 .AssetList-link {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0.5rem 0;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-decoration: none;
 
-    &:hover {
-        .AssetList-path {
-            color: rgba($color-text, 0.75);
-        }
-
-        .AssetList-icon {
-            svg {
-                fill: #999;
-            }
-        }
+  &:hover {
+    .AssetList-path {
+      color: rgba($color-text, 0.75);
     }
+
+    .AssetList-icon {
+      svg {
+        fill: #999;
+      }
+    }
+  }
 }
 
 .AssetList-icon {
-    @include margin-inline(end, 0.5rem);
+  @include margin-inline(end, 0.5rem);
 
-    svg {
-        fill: #ccc;
-    }
+  svg {
+    fill: #ccc;
+  }
 }
