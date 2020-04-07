@@ -4,7 +4,7 @@
 
 .Tree-title {
   @include font(label);
-  @include padding-inline(start, 1rem);
+  @include padding-inline(start, 2rem);
   margin-bottom: 0.5rem;
   color: $color-sidebar-heading;
 }
@@ -44,8 +44,8 @@
   }
 
   span {
-    @include padding-inline(start, 0.75rem);
-    @include margin-inline(start, -1.75rem);
+    @include padding-inline(start, 1.25rem);
+    @include margin-inline(start, -2.25rem);
     display: block;
     position: relative;
   }
@@ -55,14 +55,14 @@
     content: '';
     display: inline-block;
     position: absolute;
-    top: 0.25rem;
-    width: 0.75rem;
-    height: 0.75rem;
+    top: 0.3rem;
+    width: 1rem;
+    height: 1rem;
     opacity: 0.5;
     background-image: url('../../img/icon-navigation-opened.svg');
     background-repeat: no-repeat;
     background-position: 50%;
-    background-size: 0.5rem;
+    background-size: 0.7rem;
   }
 }
 
@@ -92,7 +92,7 @@
 
 @for $i from 1 through 8 {
   .Tree-depth-#{$i} {
-    $padLeft: ($i * 1rem);
+    $padLeft: ($i * 1rem) + 1rem;
 
     .Tree-collectionLabel,
     .Tree-entityLink {
