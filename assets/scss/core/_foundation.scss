@@ -1,28 +1,28 @@
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 ::selection {
-    background-color: rgba($color-link, 0.075);
+  background-color: rgba($color-link, 0.075);
 }
 
 html {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background: $color-background;
-    box-sizing: border-box;
-    font: 16px/#{(24/16)} $font-family-sans-serif;
-    color: $color-text;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: $color-background;
+  color: $color-text;
+  font: 16px /#{(24/16)} $font-family-sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-    height: 100%;
-    width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 blockquote,
@@ -37,107 +37,107 @@ h6,
 figure,
 p,
 pre {
-    margin: 0;
+  margin: 0;
 }
 
 button {
-    background: transparent;
-    border: 0;
-    padding: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 button:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 fieldset {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 iframe {
-    border: 0;
+  border: 0;
 }
 
 ol,
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
+  transition: all 0.15s ease-out;
+  color: $color-link;
+
+  &:active {
     color: $color-link;
-    transition: all 0.15s ease-out;
+  }
 
-    &:active {
-        color: $color-link;
-    }
-
-    &:hover {
-        color: darken($color-link, 15%);
-    }
+  &:hover {
+    color: darken($color-link, 15%);
+  }
 }
 
-[tabindex="-1"]:focus {
-    outline: none !important;
+[tabindex='-1']:focus {
+  outline: none !important;
 }
 
 code,
 pre {
-    font-family: $font-family-monospace;
-    font-size: 0.875rem; //14px
-    line-height: (24/14);
+  font-family: $font-family-monospace;
+  font-size: 0.875rem; //14px
+  line-height: (24/14);
 }
 
 svg {
-    display: inline-block;
-    vertical-align: text-bottom;
-    fill: currentColor;
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
 }
 
 ::-webkit-scrollbar {
-    height: 0.125rem;
-    width: 0.125rem;
+  width: 0.125rem;
+  height: 0.125rem;
 }
 
 ::-webkit-scrollbar-button {
-    height: 0;
-    width: 0;
+  width: 0;
+  height: 0;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba($color-text, 0.1);
-    border: 0 none transparent;
-    border-radius: 0;
+  border: 0 none transparent;
+  border-radius: 0;
+  background: rgba($color-text, 0.1);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba($color-text, 0.2);
+  background: rgba($color-text, 0.2);
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: rgba($color-text, 0.3);
+  background: rgba($color-text, 0.3);
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
-    border: 0 none transparent;
-    border-radius: 0;
+  border: 0 none transparent;
+  border-radius: 0;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-track:hover {
-    background: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-track:active {
-    background: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-corner {
-    background: transparent;
+  background: transparent;
 }
 
 h1,
@@ -146,25 +146,25 @@ h3,
 h4,
 h5,
 h6 {
-    color: $color-heading;
-    font-weight: bold;
+  color: $color-heading;
+  font-weight: bold;
 }
 
 h1 {
-    @include font(title);
+  @include font(title);
 }
 
 h2 {
-    @include font(heading);
+  @include font(heading);
 }
 
 h3 {
-    @include font(subHeading);
+  @include font(subHeading);
 }
 
 h4,
 h5,
 h6 {
-    @include font(body);
-    font-weight: bold;
+  @include font(body);
+  font-weight: bold;
 }
