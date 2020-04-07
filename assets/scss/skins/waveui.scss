@@ -1,6 +1,19 @@
-$color-header-background: #024;
-$color-header-content: #def;
-$color-link: #048;
+$curious-blue: #3da2dc;
+$astronaut-blue: #004461;
+$black: #000;
+$white: #fff;
+
+$color-link: $curious-blue;
+$color-text: $astronaut-blue;
+$color-heading: $astronaut-blue;
+
+$color-ui-hover: rgba($black, 0.025);
+$color-ui-active: rgba($black, 0.05);
+
+$color-header-background: $astronaut-blue;
+$color-header-content: rgba($white, 0.9);
+
+$color-frame-border: rgba($black, 0.1);
 
 @import '../theme';
 @import '../core/all';

@@ -43,35 +43,30 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: normal;
-  src: url('~@frctl/mandelbrot/assets/fonts/OpenSans-Regular.woff2')
-      format('woff2'),
-    url('~@frctl/mandelbrot/assets/fonts/OpenSans-Regular.woff') format('woff');
+  src: url('../../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../../fonts/OpenSans-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: normal;
-  src: url('~@frctl/mandelbrot/assets/fonts/OpenSans-Italic.woff2')
-      format('woff2'),
-    url('~@frctl/mandelbrot/assets/fonts/OpenSans-Italic.woff') format('woff');
+  src: url('../../fonts/OpenSans-Italic.woff2') format('woff2'),
+    url('../../fonts/OpenSans-Italic.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: bold;
-  src: url('~@frctl/mandelbrot/assets/fonts/OpenSans-Semibold.woff2')
-      format('woff2'),
-    url('~@frctl/mandelbrot/assets/fonts/OpenSans-Semibold.woff') format('woff');
+  src: url('../../fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../../fonts/OpenSans-Bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: bold;
-  src: url('~@frctl/mandelbrot/assets/fonts/OpenSans-SemiboldItalic.woff2')
-      format('woff2'),
-    url('~@frctl/mandelbrot/assets/fonts/OpenSans-SemiboldItalic.woff')
-      format('woff');
+  src: url('../../fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+    url('../../fonts/OpenSans-BoldItalic.woff') format('woff');
 }
