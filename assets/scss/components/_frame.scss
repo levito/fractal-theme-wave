@@ -1,3 +1,5 @@
+$hero-height: 16rem;
+
 .Frame {
   display: flex;
   position: relative;
@@ -29,29 +31,66 @@
   flex-shrink: 0;
 }
 
+.Frame-hero {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $hero-height;
+  padding: 3rem;
+  background: url(../../img/header.jpg) center / cover $color-header-background;
+  color: $color-header-content;
+  text-align: right;
+  text-transform: uppercase;
+
+  h1 {
+    @include font(heading);
+    margin-right: -0.1em;
+    color: inherit;
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  p {
+    font-size: 0.875rem;
+    letter-spacing: 0.075em;
+  }
+  
+  @include mq($until: navCollapse) {
+    display: none;
+  }
+}
+
 .Frame-body {
   display: flex;
   flex-direction: row-reverse;
   flex-grow: 1;
-  height: calc(100% - 3rem);
+  height: 100%;
 
   @include mq($until: navCollapse) {
     @include margin-inline(end, $width-sidebar);
+    height: calc(100% - 3rem);
     transform: translate3d(($width-sidebar * -1), 0, 0);
     transition: none;
   }
 }
 
 .Frame-inner {
-  @include trbl(0);
-  position: absolute;
+  position: relative;
   min-width: 280px;
-  height: 100%;
-  overflow: auto;
+  
+  @include mq($until: navCollapse) {
+    width: 100vw;
+  }
+
+  @include mq($from: navCollapse) {
+    margin-top: $hero-height;
+  }
 }
 
 .Frame-panel {
   position: relative;
+  z-index: 1;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -62,7 +101,6 @@
   width: $width-sidebar;
   min-width: $width-sidebar;
   max-width: ($width-sidebar * 2);
-  padding: 3rem 0;
   background-color: $color-background-offset;
 
   @include mq($until: navCollapse) {
@@ -72,7 +110,6 @@
 
 .Frame-panel--main {
   position: relative;
-  z-index: 1;
   flex: 1 1 auto;
   overflow: auto;
 

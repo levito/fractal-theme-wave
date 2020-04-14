@@ -7,6 +7,10 @@
   background-color: $color-header-background;
   color: $color-header-content;
   text-overflow: ellipsis;
+
+  @include mq($from: navCollapse) {
+    display: none;
+  }
 }
 
 .Header-title {
@@ -16,10 +20,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
-  @include mq(navCollapse) {
-    padding-right: 3rem;
-  }
 }
 
 .Header-button {

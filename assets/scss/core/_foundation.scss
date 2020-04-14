@@ -98,48 +98,6 @@ svg {
   vertical-align: text-bottom;
 }
 
-::-webkit-scrollbar {
-  width: 0.125rem;
-  height: 0.125rem;
-}
-
-::-webkit-scrollbar-button {
-  width: 0;
-  height: 0;
-}
-
-::-webkit-scrollbar-thumb {
-  border: 0 none transparent;
-  border-radius: 0;
-  background: rgba($color-text, 0.1);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba($color-text, 0.2);
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: rgba($color-text, 0.3);
-}
-
-::-webkit-scrollbar-track {
-  border: 0 none transparent;
-  border-radius: 0;
-  background: transparent;
-}
-
-::-webkit-scrollbar-track:hover {
-  background: transparent;
-}
-
-::-webkit-scrollbar-track:active {
-  background: transparent;
-}
-
-::-webkit-scrollbar-corner {
-  background: transparent;
-}
-
 h1,
 h2,
 h3,
