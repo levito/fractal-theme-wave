@@ -12,10 +12,10 @@
     <div class="Frame-body" data-role="body">
 
         <div class="Frame-panel Frame-panel--main" data-role="main">
-            <div class="Frame-hero">
+            <a class="Frame-hero" href="{{ path('/') }}" data-pjax>
                 <h1>{{ frctl.get('project.title') | default('Component Library') }}</h1>
                 <p>{{ frctl.get('project.description') }}</p>
-            </div>
+            </a>
 
             <div class="Frame-inner" id="pjax-container">
             {% block content %}{% endblock %}
