@@ -1,5 +1,3 @@
-$hero-height: 16rem;
-
 .Frame {
   display: flex;
   position: relative;
@@ -34,14 +32,16 @@ $hero-height: 16rem;
 .Frame-hero {
   @include link-default($color-header-content, none);
   display: flex;
-  position: fixed;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
   flex-direction: column;
   align-items: flex-end;
-  height: $hero-height;
+  height: 16rem;
   padding: 3rem;
+  transform: translateZ(-3px) scale(4);
+  transform-origin: top;
   background: url(../../img/header.jpg) center / cover $color-header-background;
   text-transform: uppercase;
   pointer-events: none;
@@ -83,13 +83,11 @@ $hero-height: 16rem;
 .Frame-inner {
   position: relative;
   min-width: 280px;
+  transform: translateZ(0);
+  background-color: $white;
   
   @include mq($until: navCollapse) {
     width: 100vw;
-  }
-
-  @include mq($from: navCollapse) {
-    margin-top: $hero-height;
   }
 }
 
@@ -117,6 +115,8 @@ $hero-height: 16rem;
   position: relative;
   flex: 1 1 auto;
   overflow: auto;
+  perspective: 1px;
+  perspective-origin: 50% 0;
 
   &.is-loading {
     background-image: url('../../img/loader.svg');
