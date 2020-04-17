@@ -31,16 +31,15 @@
 
 .Browser-tab {
   display: flex;
-  flex: auto;
   white-space: nowrap;
 
   a {
-    @include font(caption);
+    @include font(label);
     @include link-default($color-text, none);
     width: 100%;
-    padding: 0.75rem 0.75rem 0.875rem;
+    padding: 0.5rem 0.75rem;
     border-bottom: 0.125rem solid transparent;
-    text-align: center;
+    font-weight: bold;
 
     &:hover {
       border-bottom-color: #ccc;
@@ -50,7 +49,7 @@
   &.is-active {
     a {
       border-bottom-color: $color-link;
-      font-weight: bolder;
+      color: $color-link;
     }
   }
 
@@ -68,6 +67,8 @@
   max-height: 50vh;
   padding: 0.75rem;
   overflow: auto;
+  border: 1px solid $color-frame-border;
+  border-top-width: 0;
   background-color: $color-background-offset;
 
   &.is-active {

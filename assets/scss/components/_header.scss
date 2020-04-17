@@ -15,8 +15,8 @@
 
 .Header-title {
   @include link-default(inherit, none);
-  @include font(title);
-  padding: 0.5rem 1rem;
+  @include font(heading);
+  padding: 0.75rem 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

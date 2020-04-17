@@ -61,8 +61,12 @@
   @if $preset == title {
     font: bold 1.75rem /#{(32 / 28)} $font-family-sans-serif;
     font-feature-settings: 'dlig' 1;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.015em;
     text-transform: uppercase;
+
+    @include mq($from: navCollapse) {
+      font: bold 2.25rem /#{(42 / 36)} $font-family-sans-serif;
+    }
   }
 
   @if $preset == heading {
