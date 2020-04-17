@@ -13,10 +13,7 @@
     {% if not isDefault %}
         <div class="Pen-panel Pen-header">
             <h2 class="Pen-title">
-                <a class="Pen-previewLink" href="{{ previewUrl }}" title="Component preview">
-                    {{ variant.label }}
-                    {% include "icons/open-in-browser.svg" %}
-                </a>
+                {{ variant.label }}
             </h2>
             {{ status.tag(variant.status) }}
         </div>
