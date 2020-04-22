@@ -15,7 +15,9 @@
             <h2 class="Pen-title">
                 {{ variant.label }}
             </h2>
-            {{ status.tag(variant.status) }}
+            {% if variant.status != header.status %}
+                {{ status.tag(variant.status) }}
+            {% endif %}
         </div>
     {% endif %}
 
