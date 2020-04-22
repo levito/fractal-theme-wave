@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 2.5rem 3rem 0;
+  padding: 4rem 4.8rem 0;
   overflow: hidden;
   background: white;
 
   @include mq($until: navCollapse) {
-    padding: 2.5rem 1rem 0;
+    padding: 4rem 1.6rem 0;
   }
 
   &.is-resizing {
@@ -26,7 +26,7 @@
 
   .Status {
     @include margin-inline(start, auto);
-    @include padding-inline(start, 0.5rem);
+    @include padding-inline(start, 0.8rem);
   }
 
   @include mq($until: navCollapse) {
@@ -34,9 +34,9 @@
       position: relative;
       width: 0;
       height: 0;
-      padding: 0.25rem;
+      padding: 0.4rem;
       overflow: hidden;
-      border-width: 0.125rem;
+      border-width: 0.2rem;
       border-style: solid;
       border-radius: 100%;
       background-color: #fff !important;
@@ -47,7 +47,7 @@
 
 .Pen-title {
   @include font(subHeading);
-  padding: 0.5rem 0;
+  padding: 0.8rem 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -73,7 +73,7 @@
 }
 
 .Pen-description {
-  padding: 0 0 1rem;
+  padding: 0 0 1.6rem;
 }
 
 .Pen-preview {
@@ -109,6 +109,6 @@
 .Pen-info {
   position: relative;
   flex: 1 1 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 4.8rem;
   overflow: hidden;
 }

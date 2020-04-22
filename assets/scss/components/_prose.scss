@@ -55,7 +55,7 @@
     height: 0;
     margin: 2em 0;
     border: 0;
-    border-top: 0.125rem solid $color-frame-border;
+    border-top: 0.2rem solid $color-frame-border;
   }
 
   abbr {
@@ -69,7 +69,7 @@
   }
 
   code {
-    padding: 0.125rem;
+    padding: 0.2rem;
     background-color: rgba($color-text, 0.075);
   }
 
@@ -79,8 +79,8 @@
   }
 
   pre {
-    margin: 1rem -0.5rem;
-    padding: 0.125rem 0.5rem;
+    margin: 1.6rem -0.8rem;
+    padding: 0.2rem 0.8rem;
     overflow: auto;
     background-color: rgba($color-text, 0.075);
   }
@@ -91,15 +91,15 @@
 
   table {
     width: 100%;
-    margin: 1rem -0.5rem;
+    margin: 1.6rem -0.8rem;
     border-collapse: collapse;
-    font-size: 0.875rem;
+    font-size: 1.4rem;
     font-feature-settings: 'lnum' 1, 'tnum' 1;
   }
 
   caption {
     @include font(caption);
-    padding: 0 0.5rem;
+    padding: 0 0.8rem;
     opacity: 0.8;
     color: rgba($color-text, 0.75);
     font-style: italic;
@@ -108,7 +108,7 @@
 
   td,
   th {
-    padding: 0.75em 0.5rem;
+    padding: 0.75em 0.8rem;
     text-align: start;
 
     // text-align: start isn't fully supported for th elements

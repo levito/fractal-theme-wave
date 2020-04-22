@@ -16,7 +16,7 @@
 .Header-title {
   @include link-default(inherit, none);
   @include font(heading);
-  padding: 0.75rem 1rem;
+  padding: 1.2rem 1.6rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -26,8 +26,8 @@
   @include border-inline(end, 1px solid rgba($color-header-content, 0.25));
   display: block;
   flex-shrink: 0;
-  width: 3rem;
-  height: 3rem;
+  width: 4.8rem;
+  height: 4.8rem;
   border: 0;
   color: inherit;
   cursor: pointer;

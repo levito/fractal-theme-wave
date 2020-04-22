@@ -4,13 +4,13 @@
 }
 
 .FileBrowser-selectWrapper {
-  margin: -0.75rem -0.75rem 0.75rem -0.75rem;
-  padding: 0.5rem 0.75rem;
+  margin: -1.2rem -1.2rem 1.2rem -1.2rem;
+  padding: 0.8rem 1.2rem;
   background-color: rgba($color-frame-border, 0.05);
 
   .select2-container {
     @include font(caption);
-    @include margin-inline(start, -0.25rem);
+    @include margin-inline(start, -0.4rem);
     min-width: 15em;
     margin-bottom: -1px;
   }
@@ -25,7 +25,7 @@
   @include font(label);
   display: block;
   width: auto;
-  padding: 0.25rem 0;
+  padding: 0.4rem 0;
   font-weight: bold;
 }
 
@@ -65,7 +65,7 @@
     .FileBrowser-select-label {
       display: inline-block;
       position: relative;
-      width: 10rem;
+      width: 16rem;
     }
   }
 }
@@ -75,7 +75,7 @@
     .FileBrowser-select-label {
       display: inline-block;
       position: relative;
-      width: 10rem;
+      width: 16rem;
     }
   }
 }

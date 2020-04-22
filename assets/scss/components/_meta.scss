@@ -5,8 +5,8 @@
 }
 
 .Meta-item {
-  margin-bottom: 0.5rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 1.6rem;
   overflow: hidden;
 
   &:not(:last-child) {
@@ -17,16 +17,16 @@
 .Meta-key {
   @include font(label);
   display: block;
-  padding-right: 0.5rem;
-  padding-bottom: 0.25rem;
+  padding-right: 0.8rem;
+  padding-bottom: 0.4rem;
   color: $color-sidebar-heading;
 }
 
 .Meta-value {
   @include font(caption);
   display: block;
-  min-width: 10rem;
-  padding-bottom: 0.25rem;
+  min-width: 16rem;
+  padding-bottom: 0.4rem;
 
   a {
     display: inline-flex;
@@ -34,8 +34,8 @@
   }
 
   a svg {
-    width: 1rem;
-    height: 1rem;
+    width: 1.6rem;
+    height: 1.6rem;
     margin-left: 5px;
   }
 
@@ -57,12 +57,12 @@
 @include mq($from: medium) {
   .Frame.is-closed {
     .Meta-item {
-      @include padding-inline(start, 10rem);
+      @include padding-inline(start, 16rem);
     }
 
     .Meta-key {
-      @include margin-inline(start, -10rem);
-      width: 10rem;
+      @include margin-inline(start, -16rem);
+      width: 16rem;
       float: left;
     }
   }
@@ -71,12 +71,12 @@
 @include mq($from: large) {
   .Frame:not(.is-closed) {
     .Meta-item {
-      @include padding-inline(start, 10rem);
+      @include padding-inline(start, 16rem);
     }
 
     .Meta-key {
-      @include margin-inline(start, -10rem);
-      width: 10rem;
+      @include margin-inline(start, -16rem);
+      width: 16rem;
       float: left;
     }
   }
