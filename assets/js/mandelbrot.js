@@ -11,6 +11,7 @@ const utils = require('@frctl/mandelbrot/assets/js/utils')
 const framer = require('@frctl/mandelbrot/assets/js/components/frame')
 const Tree = require('@frctl/mandelbrot/assets/js/components/tree')
 const Pen = require('./components/pen')
+const Search = require('@frctl/mandelbrot/assets/js/components/search')
 
 global.fractal = {
   events: events,
@@ -18,6 +19,10 @@ global.fractal = {
 
 const frame = framer($('#frame'))
 const navTrees = $.map($('[data-behaviour="tree"]'), t => new Tree(t))
+const search = $.map(
+  $('[data-behaviour="search"]'),
+  s => new Search(s, navTrees),
+)
 let pens = []
 
 loadPen()

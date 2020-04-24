@@ -1,16 +1,29 @@
 .Navigation-search {
-  padding: 1em;
+  padding: 0 3.2rem 3.6rem;
 }
 
 .Search-label {
   @include font(label);
+  display: block;
   margin-bottom: 0.8rem;
   color: $color-sidebar-heading;
 }
 
 .Search-input {
-  width: 100%;
-  padding: 0.5em;
-  border: 1px solid $color-frame-border;
-  border-radius: 3px;
+  @include font(caption);
+  width: calc(100% + 3rem);
+  margin: 0 -1.5rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 99rem;
+  outline: none;
+  box-shadow: 0 0 0 1px rgba($black, 0.05);
+
+  &:hover {
+    box-shadow: 0 0 0 1px rgba($black, 0.15);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $curious-blue;
+  }
 }
