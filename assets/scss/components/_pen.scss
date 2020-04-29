@@ -46,7 +46,7 @@
 }
 
 .Pen-title {
-  @include font(subHeading);
+  @include font(heading);
   padding: 0.8rem 0;
   overflow: hidden;
   text-overflow: ellipsis;
