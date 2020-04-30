@@ -28,7 +28,7 @@
   "dependencies": {
     "@frctl/mandelbrot": "^1.2.1",
     "iframe-resizer": "^4.2.10",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-pjax": "^2.0.1",
     "jquery-resizable-dom": "^0.16.0",
     "normalize.css": "^8.0.1",
