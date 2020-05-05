@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 4rem 4.8rem 0;
+  padding: 4.8rem;
   overflow: hidden;
   background: white;
 
@@ -47,7 +47,7 @@
 
 .Pen-title {
   @include font(heading);
-  padding: 0.8rem 0;
+  padding: 2.6rem 0 1.6rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -55,6 +55,7 @@
 
 .Pen-title--main {
   @include font(title);
+  padding-top: 0;
 }
 
 .Pen-previewLink {
@@ -109,6 +110,6 @@
 .Pen-info {
   position: relative;
   flex: 1 1 auto;
-  margin-bottom: 4.8rem;
+  margin-bottom: 2.4rem;
   overflow: hidden;
 }
