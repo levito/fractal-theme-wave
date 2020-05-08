@@ -23,6 +23,7 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
+  padding: 2.6rem 0 1.6rem;
 
   .Status {
     @include margin-inline(start, auto);
@@ -45,9 +46,12 @@
   }
 }
 
+.Pen-header--main {
+  padding-top: 0;
+}
+
 .Pen-title {
   @include font(heading);
-  padding: 2.6rem 0 1.6rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -55,7 +59,6 @@
 
 .Pen-title--main {
   @include font(title);
-  padding-top: 0;
 }
 
 .Pen-previewLink {

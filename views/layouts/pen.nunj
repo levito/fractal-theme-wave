@@ -30,7 +30,7 @@
     {% else %}
         {% set header = entity.parent %}
     {% endif %}
-    <div class="Pen-panel Pen-header">
+    <div class="Pen-panel Pen-header Pen-header--main">
         <h1 class="Pen-title Pen-title--main">
             <a class="Pen-previewLink" href="{{ previewUrl }}" title="Component preview">
                 {{ header.title }}
