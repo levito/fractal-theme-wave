@@ -16,17 +16,15 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/wave.css',
     }),
-    new CopyPlugin([
-      {
-        from: './assets/img/**/*',
-        to: './img',
-        flatten: true,
-      },
-      {
-        from: './assets/favicon.ico',
-        to: '.',
-      },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './assets/img/**/*',
+          to: './img',
+          flatten: true,
+        },
+      ],
+    }),
   ],
   resolve: {
     // fix issues with duplicate dependencies in linked modules
