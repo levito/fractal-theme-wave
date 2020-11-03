@@ -2,7 +2,6 @@ const path = require('path')
 
 const CopyPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const magicImporter = require('node-sass-magic-importer')
 
 module.exports = {
   entry: {
@@ -90,7 +89,9 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: [require('autoprefixer')()],
+              postcssOptions: {
+                plugins: ['autoprefixer'],
+              },
               sourceMap: true,
             },
           },
@@ -103,9 +104,6 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sassOptions: {
-                importer: magicImporter(),
-              },
               sourceMap: true,
             },
           },
