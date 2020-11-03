@@ -1,9 +1,8 @@
 'use strict'
 
-const $ = global.jQuery
-const select = require('select2')
+import 'select2'
 
-class Browser {
+export default class Browser {
   constructor(el) {
     const self = this
 
@@ -20,7 +19,7 @@ class Browser {
       .select2({
         minimumResultsForSearch: Infinity,
       })
-      .on('change', function() {
+      .on('change', function () {
         $(this)
           .closest('.FileBrowser')
           .find('[data-role="resource-preview"]')
@@ -32,7 +31,7 @@ class Browser {
   _initTabs() {
     const ac = this._activeClass
     const tabs = this._tabs
-    tabs.on('click', e => {
+    tabs.on('click', (e) => {
       const link = $(e.target).closest('a')
       const tab = link.parent()
       tabs.removeClass(ac)
@@ -43,5 +42,3 @@ class Browser {
     })
   }
 }
-
-module.exports = Browser

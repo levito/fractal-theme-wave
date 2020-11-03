@@ -1,29 +1,25 @@
 'use strict'
 
-global.jQuery = require('jquery')
-const pjax = require('jquery-pjax')
-const $ = global.jQuery
+import jQuery from 'jquery'
+import 'jquery-pjax'
+
+import events from '@frctl/mandelbrot/assets/js/events'
+import utils from '@frctl/mandelbrot/assets/js/utils'
+import framer from '@frctl/mandelbrot/assets/js/components/frame'
+import Pen from './components/pen'
+import Navigation from '@frctl/mandelbrot/assets/js/components/navigation'
+
 const doc = $(document)
 const frctl = window.frctl || {}
 
-const events = require('@frctl/mandelbrot/assets/js/events')
-const utils = require('@frctl/mandelbrot/assets/js/utils')
-const framer = require('@frctl/mandelbrot/assets/js/components/frame')
-const Tree = require('@frctl/mandelbrot/assets/js/components/tree')
-const Pen = require('./components/pen')
-const Search = require('@frctl/mandelbrot/assets/js/components/search')
+// frame needs to be initalized before navigation because it
+// needs to add an event listener before Navigation->Tree triggers it
+const frame = framer($('#frame'))
+new Navigation($('.Navigation'))
 
 global.fractal = {
   events: events,
 }
-
-const frame = framer($('#frame'))
-const navTrees = $.map($('[data-behaviour="tree"]'), t => new Tree(t))
-const search = $.map(
-  $('[data-behaviour="search"]'),
-  s => new Search(s, navTrees),
-)
-let pens = []
 
 loadPen()
 
@@ -37,14 +33,14 @@ if (frctl.env == 'server') {
         timeout: 10000,
       },
     )
-    .on('pjax:start', function(e, xhr, options) {
+    .on('pjax:start', function (e, xhr, options) {
       if (utils.isSmallScreen()) {
         frame.closeSidebar()
       }
       frame.startLoad()
       events.trigger('main-content-preload', options.url)
     })
-    .on('pjax:end', function() {
+    .on('pjax:end', function () {
       events.trigger('main-content-loaded')
       frame.endLoad()
     })
@@ -53,7 +49,7 @@ if (frctl.env == 'server') {
 events.on('main-content-loaded', loadPen)
 
 function loadPen() {
-  setTimeout(function() {
-    pens = $.map($('[data-behaviour="pen"]'), p => new Pen(p))
+  setTimeout(function () {
+    $.map($('[data-behaviour="pen"]'), (p) => new Pen(p))
   }, 1)
 }

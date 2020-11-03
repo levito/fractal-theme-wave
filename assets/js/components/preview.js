@@ -1,14 +1,13 @@
 'use strict'
 
-const $ = global.jQuery
-const storage = require('@frctl/mandelbrot/assets/js/storage')
-const events = require('@frctl/mandelbrot/assets/js/events')
-const resizeable = require('jquery-resizable-dom/dist/jquery-resizable.js')
-const iframeResizer = require('iframe-resizer/js/iframeResizer.min.js')
+import storage from '@frctl/mandelbrot/assets/js/storage'
+import events from '@frctl/mandelbrot/assets/js/events'
+import resizeable from 'jquery-resizable-dom/dist/jquery-resizable.js'
+import iframeResizer from 'iframe-resizer/js/iframeResizer.min.js'
 
-class Preview {
+export default class Preview {
   constructor(el) {
-    this._el = jQuery(el)
+    this._el = $(el)
     this._id = this._el[0].id
     this._handleVertical = this._el.find('[data-role="resize-handle"]')
     this._handleHorizontal = this._el.find(
@@ -78,5 +77,3 @@ class Preview {
     this._el.removeClass('is-disabled')
   }
 }
-
-module.exports = Preview

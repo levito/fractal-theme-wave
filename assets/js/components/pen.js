@@ -1,12 +1,11 @@
 'use strict'
 
-const $ = global.jQuery
-const storage = require('@frctl/mandelbrot/assets/js/storage')
-const events = require('@frctl/mandelbrot/assets/js/events')
-const Preview = require('./preview')
-const Browser = require('./browser')
+import storage from '@frctl/mandelbrot/assets/js/storage'
+import events from '@frctl/mandelbrot/assets/js/events'
+import Preview from './preview'
+import Browser from './browser'
 
-class Pen {
+export default class Pen {
   constructor(el) {
     this._el = $(el)
     this._previewPanel = this._el.find('[data-behaviour="preview"]')
@@ -19,5 +18,3 @@ class Pen {
     this._browser.each((i, el) => new Browser(el))
   }
 }
-
-module.exports = Pen

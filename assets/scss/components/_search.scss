@@ -1,5 +1,29 @@
 .Navigation-search {
-  padding: 0 3.2rem 3.6rem;
+  padding: 0 3.2rem 1.2rem;
+}
+
+.Search {
+  position: relative;
+}
+
+.Search-clearButton {
+  position: absolute;
+  right: -1.6rem;
+  bottom: 0;
+  width: 3.6rem;
+  height: 3.6rem;
+  opacity: 0.5;
+  line-height: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .Search-label {
@@ -11,9 +35,10 @@
 
 .Search-input {
   @include font(caption);
+  appearance: none;
   width: calc(100% + 3rem);
   margin: 0 -1.5rem;
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 3.5rem 0.6rem 1.5rem;
   border: none;
   border-radius: 99rem;
   outline: none;
@@ -25,5 +50,18 @@
 
   &:focus {
     box-shadow: 0 0 0 2px $curious-blue;
+  }
+
+  // Hide native "clear" button in IE
+  &::-ms-clear {
+    display: none;
+  }
+
+  // Hide native "clear" button in Chrome
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
   }
 }

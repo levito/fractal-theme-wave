@@ -127,3 +127,7 @@ h6 {
   @include font(body);
   font-weight: bold;
 }
+
+mark {
+  background-color: rgba($color-link, 0.5);
+}
