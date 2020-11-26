@@ -11,9 +11,12 @@
 }
 
 .Tree-title {
+  --color: rgba(var(--skin-accent), 0.75);
+
   @include font(label);
   flex: 1 1 auto;
   color: $color-sidebar-heading;
+  color: var(--color, rgba($color-sidebar-heading, 0.75));
 }
 
 .Tree-collapse {
@@ -55,6 +58,8 @@
 }
 
 .Tree-collectionLabel {
+  --color: rgb(var(--skin-accent));
+
   @include font(caption);
   display: block;
   position: relative;
@@ -62,6 +67,7 @@
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   color: $color-text;
+  color: var(--color, $color-text);
   user-select: none;
   touch-action: manipulation;
 

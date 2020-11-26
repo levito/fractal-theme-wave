@@ -62,12 +62,18 @@
 }
 
 .Pen-previewLink {
+  --color: rgb(var(--skin-accent));
+
   @include link-default($color-heading, none);
+  @include link-default(var(--color, $color-heading), none);
 
   svg {
+    --fill: rgb(var(--skin-links));
+
     transition: opacity 0.2s;
     opacity: 0.25;
     fill: $color-link;
+    fill: var(--fill, $color-link);
     vertical-align: middle;
   }
 

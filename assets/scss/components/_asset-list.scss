@@ -10,10 +10,16 @@
 }
 
 .AssetList-name {
+  --color: rgba(var(--skin-accent), 0.5);
+
   color: rgba($color-text, 0.5);
+  color: var(--color, rgba($color-text, 0.5));
 
   strong {
+    --color: rgb(var(--skin-links));
+
     color: $color-link;
+    color: var(--color, $color-link);
     font-weight: normal;
   }
 }
@@ -27,7 +33,10 @@
 
   &:hover {
     .AssetList-path {
+      --color: rgba(var(--skin-accent), 0.75);
+
       color: rgba($color-text, 0.75);
+      color: var(--color, rgba($color-text, 0.75));
     }
 
     .AssetList-icon {

@@ -34,7 +34,6 @@
   h2 {
     @include font(heading);
     margin-bottom: 1em;
-    color: $color-heading;
   }
 
   *:not(hr) + h2 {
@@ -63,14 +62,20 @@
   }
 
   blockquote {
+    --border-color: rgba(var(--skin-accent), 0.25);
+
     @include border-inline(start, solid rgba($color-text, 0.25));
+    @include border-inline(start, solid var(--border-color, rgba($color-text, 0.75)));
     @include padding-inline(start, 1em);
     opacity: 0.75;
   }
 
   code {
+    --background-color: rgba(var(--skin-accent), 0.075);
+
     padding: 0.2rem;
     background-color: rgba($color-text, 0.075);
+    background-color: var(--background-color, rgba($color-text, 0.075));
   }
 
   pre > code {
@@ -79,10 +84,13 @@
   }
 
   pre {
+    --background-color: rgba(var(--skin-accent), 0.075);
+
     margin: 1.6rem -0.8rem;
     padding: 0.2rem 0.8rem;
     overflow: auto;
     background-color: rgba($color-text, 0.075);
+    background-color: var(--background-color, rgba($color-text, 0.075));
   }
 
   img {
@@ -98,10 +106,13 @@
   }
 
   caption {
+    --color: rgba(var(--skin-accent), 0.75);
+
     @include font(caption);
     padding: 0 0.8rem;
     opacity: 0.8;
     color: rgba($color-text, 0.75);
+    color: var(--color, rgba($color-text, 0.75));
     font-style: italic;
     text-align: start;
   }
@@ -121,12 +132,20 @@
   }
 
   tr:nth-child(even) {
+    --background-color: rgba(var(--skin-accent), 0.075);
+
     background-color: rgba($color-text, 0.05);
+    background-color: var(--background-color, rgba($color-text, 0.05));
   }
 
   th {
+    --border-color: rgba(var(--skin-accent), 0.1);
+    --background-color: rgba(var(--skin-accent), 0.075);
+
     border-bottom: 1px solid rgba($color-text, 0.1);
+    border-bottom: 1px solid var(--background-color, rgba($color-text, 0.1));
     background-color: rgba($color-text, 0.075);
+    background-color: var(--background-color, rgba($color-text, 0.075));
   }
 }
 

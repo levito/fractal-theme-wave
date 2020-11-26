@@ -48,8 +48,11 @@
 
   &.is-active {
     a {
-      border-bottom-color: $color-link;
+      --color: rgb(var(--skin-links));
+
+      border-bottom-color: currentColor;
       color: $color-link;
+      color: var(--color, $color-link);
     }
   }
 
@@ -104,7 +107,10 @@
 }
 
 .Browser-isEmptyNote {
+  --color: rgb(var(--skin-accent));
+
   opacity: 0.6;
   color: $color-text;
+  color: var(--color, $color-text);
   font-style: italic;
 }

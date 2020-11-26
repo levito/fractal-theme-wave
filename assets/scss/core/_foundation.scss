@@ -5,16 +5,22 @@
 }
 
 ::selection {
+  --background-color: rgba(var(--skin-links), 0.2);
+
   background-color: rgba($color-link, 0.5);
+  background-color: var(--background-color, rgba($color-link, 0.2));
 }
 
 html {
+  --html-color: rgb(var(--skin-accent));
+
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   background: $color-background;
   color: $color-text;
+  color: var(--html-color, $color-text);
   font-size: 62.5%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -70,15 +76,17 @@ ul {
 }
 
 a {
-  transition: all 0.15s ease-out;
-  color: $color-link;
+  --links-color: rgba(var(--skin-links), 0.9);
 
-  &:active {
-    color: $color-link;
-  }
+  transition: all 0.15s ease-out;
+  color: rgba($color-link, 0.9);
+  color: var(--links-color, rgba($color-link, 0.9));
 
   &:hover {
-    color: darken($color-link, 15%);
+    --links-color: rgb(var(--skin-links));
+
+    color: $color-link;
+    color: var(--links-color, $color-link);
   }
 }
 
@@ -105,7 +113,10 @@ h3,
 h4,
 h5,
 h6 {
+  --color: rgb(var(--skin-accent));
+
   color: $color-heading;
+  color: var(--color, $color-heading);
   font-weight: bold;
 }
 
@@ -129,5 +140,8 @@ h6 {
 }
 
 mark {
+  --background-color: rgba(var(--skin-links), 0.5);
+
   background-color: rgba($color-link, 0.5);
+  background-color: var(--background-color, rgba($color-link, 0.5));
 }

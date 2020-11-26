@@ -2,8 +2,11 @@
   margin-top: 2.4rem;
 
   pre {
+    --color: rgba(var(--skin-accent), 0.75);
+
     @include font(code);
     color: rgba($color-text, 0.75);
+    color: var(--color, rgba($color-text, 0.75));
   }
 }
 

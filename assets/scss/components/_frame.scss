@@ -30,7 +30,11 @@
 }
 
 .Frame-hero {
+  --background-color: rgb(var(--skin-accent));
+  --content-color: rgb(var(--skin-complement));
+
   @include link-default($color-header-content, none);
+  @include link-default(var(--content-color, $color-header-content), none);
   display: flex;
   position: relative;
   top: 0;
@@ -43,6 +47,7 @@
   transform: translateZ(-3px) scale(4);
   transform-origin: top;
   background: url(../../img/header.jpg) center / cover $color-header-background;
+  background: url(../../img/header.jpg) center / cover var(--background-color, $color-header-background);
   text-transform: uppercase;
   pointer-events: none;
 
