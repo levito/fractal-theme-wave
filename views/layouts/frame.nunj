@@ -12,7 +12,10 @@
     <div class="Frame-body" data-role="body">
 
         <div class="Frame-panel Frame-panel--main" data-role="main">
-            <a class="Frame-hero" href="{{ path('/') }}" data-pjax>
+            <a class="Frame-hero" href="{{ path('/') }}" data-pjax
+            {%- if frctl.theme.get('skin.heroImage') %}
+                style="background-image: url({{ frctl.theme.get('skin.heroImage') }})"
+            {%- endif %}>
                 <h1>{{ frctl.get('project.title') | default('Component Library') }}</h1>
                 <p>{{ frctl.get('project.description') }}</p>
             </a>
@@ -25,6 +28,11 @@
         <div class="Frame-handle" data-role="frame-resize-handle"></div>
 
         <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+        {% if frctl.theme.get('skin.logo') %}
+            <a class="Logo" href="{{ path('/') }}" data-pjax>
+                <img src="{{ frctl.theme.get('skin.logo') }}" alt="Logo" />
+            </a>
+        {% endif %}
             {% include 'partials/navigation/navigation.nunj' %}
         </div>
     </div>

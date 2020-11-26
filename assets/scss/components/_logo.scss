@@ -1,0 +1,12 @@
+.Logo {
+  display: flex;
+  align-items: center;
+  height: 12.8rem;
+  padding: 4rem 2.4rem;
+  background-color: $white;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
