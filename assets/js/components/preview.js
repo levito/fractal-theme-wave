@@ -1,8 +1,8 @@
 'use strict'
 
+import 'jquery-resizable-dom'
 import storage from '@frctl/mandelbrot/assets/js/storage'
 import events from '@frctl/mandelbrot/assets/js/events'
-import resizeable from 'jquery-resizable-dom/dist/jquery-resizable.js'
 import iframeResizer from 'iframe-resizer/js/iframeResizer.min.js'
 
 export default class Preview {
@@ -32,7 +32,7 @@ export default class Preview {
     )
 
     this._resizer.resizable({
-      handleSelector: this._handleVertical,
+      handleSelector: '> [data-role="resize-handle"]',
       resizeHeight: false,
       onDragStart: () => {
         this._el.addClass('is-resizing')
@@ -51,7 +51,7 @@ export default class Preview {
     })
 
     this._resizer.resizable({
-      handleSelector: this._handleHorizontal,
+      handleSelector: '> [data-role="resize-handle-horizontal"]',
       resizeWidth: false,
       onDragStart: () => {
         this._el.addClass('is-resizing')
