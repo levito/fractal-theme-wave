@@ -25,11 +25,6 @@ module.exports = {
       ],
     }),
   ],
-  resolve: {
-    // fix issues with duplicate dependencies in linked modules
-    symlinks: false,
-    modules: [path.resolve('node_modules')],
-  },
   module: {
     rules: [
       {
