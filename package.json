@@ -26,7 +26,8 @@
   "author": "Veit Lehmann",
   "license": "MIT",
   "peerDependencies": {
-    "@frctl/fractal": ">= 1.1.0-alpha.0 < 2"
+    "@frctl/fractal": ">= 1.1.0-alpha.0 < 2",
+    "iframe-resizer": ">= 4 < 5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
