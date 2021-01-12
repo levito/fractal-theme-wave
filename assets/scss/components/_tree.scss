@@ -130,7 +130,7 @@
       @include padding-inline(start, (($i - 1) * 1.6rem) + 1.6rem);
 
       &::before {
-        @include offset-inline(start, (($i - 2) + 1.2rem));
+        @include offset-inline(start, (($i - 1) * 1.6rem) - 0.4rem);
       }
     }
 
