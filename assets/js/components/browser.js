@@ -34,10 +34,11 @@ export default class Browser {
     tabs.on('click', (e) => {
       const link = $(e.target).closest('a')
       const tab = link.parent()
+      const show = !tab.hasClass(ac)
       tabs.removeClass(ac)
-      tab.addClass(ac)
+      tab.toggleClass(ac, show)
       this._tabPanels.removeClass(ac)
-      this._tabPanels.filter(link.attr('href')).addClass(ac)
+      this._tabPanels.filter(link.attr('href')).toggleClass(ac, show)
       return false
     })
   }

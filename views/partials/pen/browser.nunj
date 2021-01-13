@@ -1,3 +1,6 @@
 <div class="Pen-panel Pen-info" data-role="info">
+    {% if not 'preview' in frctl.theme.get('panels') %}
+        {% include 'partials/pen/preview.nunj' %}
+    {% endif %}
     {% include 'partials/browser/browser.nunj' %}
 </div>
