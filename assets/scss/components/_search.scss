@@ -27,10 +27,13 @@
 }
 
 .Search-label {
+  --color: rgba(var(--skin-accent), 0.75);
+
   @include font(label);
   display: block;
   margin-bottom: 0.8rem;
   color: $color-sidebar-heading;
+  color: var(--color, rgba($color-sidebar-heading, 0.75));
 }
 
 .Search-input {

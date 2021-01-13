@@ -34,8 +34,10 @@
   white-space: nowrap;
 
   a {
+    --color: rgb(var(--skin-accent));
+
     @include font(label);
-    @include link-default($color-text, none);
+    @include link-default(var(--color, $color-text), none);
     width: 100%;
     padding: 0.8rem 1.2rem;
     border-bottom: 0.2rem solid transparent;
