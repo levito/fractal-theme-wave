@@ -64,11 +64,22 @@
 }
 
 .Browser-tab--previewLink {
-  margin-left: auto;
-
   svg {
     width: 1.6rem;
     height: 1.6rem;
+  }
+}
+
+.Browser-preview-size {
+  @include font(label);
+  margin-left: auto;
+  padding: 0.8rem 0;
+  opacity: 0.7;
+  letter-spacing: 0;
+  white-space: nowrap;
+
+  @include mq($until: navCollapse) {
+    display: none;
   }
 }
 

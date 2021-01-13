@@ -10,11 +10,12 @@ export default class Pen {
     this._el = $(el)
     this._previewPanel = this._el.find('[data-behaviour="preview"]')
     this._browser = this._el.find('[data-behaviour="browser"]')
+    this._previewSize = this._el.find('[data-role="preview-size"]')
     this._init()
   }
 
   _init() {
-    this._previewPanel.each((i, el) => new Preview(el))
+    this._previewPanel.each((i, el) => new Preview(el, this._previewSize))
     this._browser.each((i, el) => new Browser(el))
   }
 }

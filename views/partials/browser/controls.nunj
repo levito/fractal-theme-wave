@@ -19,6 +19,7 @@
         </li>
         {% endif %}
         {% endfor %}
+        <li class="Browser-preview-size" data-role="preview-size"></li>
         <li class="Browser-tab Browser-tab--previewLink">
             <a href="{{ previewUrl }}" title="Component preview">
                 Open {% include "icons/open-in-browser.svg" %}

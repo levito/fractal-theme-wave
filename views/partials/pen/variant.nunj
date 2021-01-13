@@ -1,5 +1,5 @@
 {% if not variant.isHidden %}
-<div class="Pen-variant">
+<div class="Pen-variant" data-behaviour="pen">
     {% if entity.collated and entity.isComponent %}
         {% if entity.variants().size == 1 %}
             {% set previewUrl = path(frctl.theme.urlFromRoute('preview', {handle: entity.handle})) %}
