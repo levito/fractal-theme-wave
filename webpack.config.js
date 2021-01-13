@@ -19,8 +19,7 @@ module.exports = {
       patterns: [
         {
           from: './assets/img/**/*',
-          to: './img',
-          flatten: true,
+          to: './img/[name].[ext]',
         },
       ],
     }),
