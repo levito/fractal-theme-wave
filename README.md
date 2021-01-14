@@ -11,10 +11,10 @@ A Fractal subtheme based on the default Mandelbrot theme.
 
 ## Installation
 
-Install Fractal and this theme:
+Install Fractal, iframe-resizer and this theme:
 
 ```
-npm install --save-dev @frctl/fractal fractal-theme-wave
+npm install --save-dev @frctl/fractal iframe-resizer fractal-theme-wave
 ```
 
 ## Setup
