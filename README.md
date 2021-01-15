@@ -45,3 +45,5 @@ fractal.web.theme(
   }),
 )
 ```
+
+Add `iframe-resizer/js/iframeResizer.contentWindow` to the preview template or your JS bundle so the iframes can automatially resize to fit their content.
